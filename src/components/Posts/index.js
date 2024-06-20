@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+import stylesPost from './Posts.module.css'
+
 const Posts = () => {
     const [posts, setPosts] = useState([]);
     const [description, setDescription] = useState('');
@@ -71,24 +73,28 @@ const Posts = () => {
     };
 
     return (
-        <div>
-            <h2>Posts</h2>
-            <button onClick={handleLogout}>Logout</button>
-            <form onSubmit={handlePost}>
-                <label>Description:</label>
-                <input
-                    type="text"
+        <div class={stylesPost.postsContainer}>
+            <div className={stylesPost.welcomeContainer}>
+                <p className={stylesPost.welcomeTitle}>Olá, seja bem vindo!</p>
+                <button className={stylesPost.buttonLogout} onClick={handleLogout}>Logout</button>
+            </div>
+            <form onSubmit={handlePost} class={stylesPost.formPost}>
+                <textarea
+                    maxLength={360}
+                    placeholder='O que está pensando?'
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
-                <button type="submit">Post</button>
+                <button className={stylesPost.buttonPost} type="submit">Postar</button>
             </form>
+            <h2>Posts</h2>
             <ul>
                 {posts.map(post => (
                     <li key={post.id}>
-                        <p>{post.user.username}: {post.description}</p>
+                        <p className={stylesPost.user}>{post.user.username}</p>
+                        <p className={stylesPost.textPost}>{post.description}</p>
                         <small>{new Date(post.created_at).toLocaleString()}</small>
-                        {post.can_delete && <button onClick={() => handleDelete(post.id)}>Delete</button>}
+                        {post.can_delete && <button onClick={() => handleDelete(post.id)} className={stylesPost.buttonDelete}>Delete</button>}
                     </li>
                 ))}
             </ul>

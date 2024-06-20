@@ -1,0 +1,24 @@
+.registerContainer {
+    max-width: 340px;
+    margin: 48px auto;
+    border: 1px solid #333;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.buttonRegister {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    padding: 8px;
+    width: 100%;
+    background-color: #1475b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buttonRegister:hover {
+    background-color: #0a4b75;
+}

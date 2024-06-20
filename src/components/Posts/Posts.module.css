@@ -1,0 +1,113 @@
+.postsContainer {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.formPost {
+    padding-bottom: 32px;
+    border: 1px solid #333;
+    padding: 8px;
+    border-radius: 16px;
+    margin: 48px 0;
+}
+
+textarea { 
+    display: block;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    resize: none;
+    text-align: center;
+}
+
+.buttonLogout {
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+    padding: 4px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 70px;
+    background-color: #75630a;
+}
+
+.buttonLogout:hover {
+    background-color: #a98f10;
+}
+
+.buttonPost {
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+    padding: 4px;
+    background-color: #1475b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 70px;
+    margin: 8px auto;
+}
+
+button:hover {
+    background-color: #0a4b75;
+}
+
+li {
+    border: 1px solid #333;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.welcomeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #60606035;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.welcomeTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.user {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.textPost {
+    font-size: 24px;
+    padding-bottom: 16px;
+}
+
+.buttonDelete {
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+    padding: 4px;
+    background-color: #fb6f24;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 70px;
+    margin: 8px auto;
+}
+
+.buttonDelete:hover {
+    background-color: #944216;
+}
