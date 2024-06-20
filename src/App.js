@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Login from './components/Login';
-import Register from './components/Register';
+import Register from './components/Register'
 import Posts from './components/Posts';
 
 const App = () => {
@@ -9,11 +9,12 @@ const App = () => {
 
     return (
         <Router>
-            <div className="App">
+            <div className='divCenter'>
                 <header className="App-header">
-                    <h1>Feed de Postagens</h1>
+                    <h1>Bird!</h1>
+                    <h3>Acontecendo agora...</h3>
                 </header>
-                <main>
+                <main className="container">
                     <Routes>
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
