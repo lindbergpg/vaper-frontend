@@ -13,7 +13,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8000/api/token/', {
+            const response = await axios.post('https://bird-api-265ef50da0d8.herokuapp.com/api/token/', {
                 username,
                 password
             });

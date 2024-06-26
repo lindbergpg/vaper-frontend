@@ -12,6 +12,9 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     background-color: #1475b6;
     padding: 16px;
@@ -29,7 +32,6 @@ header {
 
 h1, h3 {
     text-align: center;
-    margin-bottom: 24px;
 }
 
 h2 {

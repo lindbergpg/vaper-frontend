@@ -13,7 +13,7 @@ const Posts = () => {
         const fetchPosts = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:8000/api/posts/', {
+                const response = await axios.get('https://bird-api-265ef50da0d8.herokuapp.com/api/posts/', {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -33,7 +33,7 @@ const Posts = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:8000/api/posts/', {
+            const response = await axios.post('https://bird-api-265ef50da0d8.herokuapp.com/api/posts/', {
                 description
             }, {
                 headers: {
@@ -53,7 +53,7 @@ const Posts = () => {
     const handleDelete = async (postId) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:8000/api/posts/${postId}/`, {
+            await axios.delete(`https://bird-api-265ef50da0d8.herokuapp.com/api/posts/${postId}/`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
