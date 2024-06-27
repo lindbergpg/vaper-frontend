@@ -22,15 +22,16 @@ const Login = () => {
             navigate('/posts'); // Redireciona para a página de posts
         } catch (error) {
             console.error('Error logging in:', error);
+            alert("Login com erros, favor verifique o usuário ou senha.")
         }
     };
 
     return (
         <div className={stylesLogin.loginContainer}>
-            <h2>Login</h2>
+            <h2>Conecte-se</h2>
             <form onSubmit={handleLogin}>
-                <input type="text" placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} />
-                <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input type="text" placeholder='Usuário' value={username} onChange={(e) => setUsername(e.target.value)} />
+                <input type="password" placeholder='Senha' value={password} onChange={(e) => setPassword(e.target.value)} />
                 <button type="submit" className={stylesLogin.buttonLogin}>Entrar</button>
             </form>
             <p className={stylesLogin.pLogin}>Ainda não possui login?</p>
